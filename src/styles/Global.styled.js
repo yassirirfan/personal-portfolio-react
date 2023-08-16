@@ -1,7 +1,75 @@
+import { Component } from 'react';
 import styled from 'styled-components';
 
 export const MainBody = styled.div`
     background-color: ${(props) => props.theme.colors.primary};
-    height: 50px;
-    width: 100%; 
+`
+export const Container = styled.div`
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+`
+export const PaddingContainer = styled.div`
+    padding-top : ${({top}) => top};
+    padding-bottom: ${({bottom}) => bottom};
+    padding-left: ${({left}) => left};
+    padding-right: ${({right}) => right};
+`
+export const FlexContainer = styled.div`
+    display:flex;
+    justify-content: ${({jsutify}) => jsutify};
+    align-items: ${({align}) => align};
+    gap: ${({gap}) => gap};
+    flex-direction: ${({direction}) => direction};
+    
+    & > div {
+        flex: ${({fullWidthChild}) => fullWidthChild && 1}
+    }
+`
+// Wrapping PaddingContainer Component inside the styled
+// Now Heading component will be able to use the properties of PaddingContainer
+export const Heading = styled(PaddingContainer)`
+    color: ${({theme}) => theme.colors.white};
+    text-align: ${({align}) => align};
+    font-size: ${({size}) => {
+        switch(size){
+            case 'h1': 
+                return '4.5rem';
+
+            case 'h2': 
+                return '3rem';
+
+            case 'h3': 
+                return '2rem';
+
+            case 'h4':
+                return '1rem';
+
+            default:
+                return;
+        }
+    }}
+`
+export const BlueText = styled.span`
+    color: ${({theme}) => theme.colors.secondary};
+`
+export const ParaText = styled(PaddingContainer)`
+    color: ${({theme}) => theme.colors.para_text_color};
+    line-height: 2rem;
+`
+export const IconContainer = styled.div`
+    font-size: ${({size}) => size};
+    cursor: pointer;
+    color: ${({color, theme}) => {
+        switch(color){
+            case 'white':
+                return theme.colors.white;
+
+            case 'blue':
+                return theme.colors.secondary;
+
+            default:
+                return;
+        }
+    }}
 `
