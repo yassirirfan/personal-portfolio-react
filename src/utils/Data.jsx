@@ -87,5 +87,4 @@ export const projects = [
         reverse: false
     }
     
-    
 ]

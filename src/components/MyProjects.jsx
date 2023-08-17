@@ -6,6 +6,7 @@ import {
   } from  '../styles/Global.styled'
 
 import { projects } from '../utils/Data'
+import { Project } from './layouts/Project'
 
 const MyProjects = () => {
   return (
@@ -21,8 +22,8 @@ const MyProjects = () => {
             What <BlueText>I have built</BlueText>
         </Heading>
         {projects.map((project) => (
-            <PaddingContainer top="5rem" bottom="5rem">
-                
+            <PaddingContainer key={project.id} top="5rem" bottom="5rem">
+                <Project data={project} />
             </PaddingContainer>
         ))}
 
