@@ -41,6 +41,11 @@ export const Skills = [
         icons: <SiMongoose />
     },
     {
+        id: 7,
+        tech: 'Linux',
+        icons: <SiLinux />
+    },
+    {
         id: 8,
         tech: 'Mysql',
         icons: <SiMysql />
@@ -59,11 +64,6 @@ export const Skills = [
         id: 11,
         tech: 'GitHub',
         icons: <FaGithub />
-    },
-    {
-        id: 7,
-        tech: 'Linux',
-        icons: <SiLinux />
     },
 ]
 
@@ -87,4 +87,27 @@ export const projects = [
         reverse: false
     }
     
+]
+
+export const NavLinks = [
+    {
+        id: 0, 
+        name: 'Home',
+        href: 'Home'
+    },
+    {
+        id: 1, 
+        name: 'Skills',
+        href: 'Skills'
+    },
+    {
+        id: 2, 
+        name: 'Projects',
+        href: 'Projects'
+    },
+    {
+        id: 3, 
+        name: 'Contact',
+        href: 'Contact'
+    }
 ]

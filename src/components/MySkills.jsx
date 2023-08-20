@@ -21,7 +21,7 @@ import { Skills } from '../utils/Data';
 const MySkills = () => {
   return (
     <PaddingContainer
-      id="skills"
+      id="Skills"
       top="10%"
       bottom="10%"
     >
@@ -29,7 +29,7 @@ const MySkills = () => {
         {/* ---left-container-- */}
         <SkillCardContainer>
           {Skills.map((skill) => (
-              <SkillCard>
+              <SkillCard key={skill.id}>
                 <IconContainer size="5rem" color="blue">
                     {skill.icons}
                 </IconContainer>

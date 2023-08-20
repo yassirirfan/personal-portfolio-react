@@ -8,12 +8,14 @@ import Showcase from "./components/Showcase";
 import MySkills from "./components/MySkills";
 import MyProjects from "./components/MyProjects";
 import Footer from "./components/Footer";
+import NavbBar from "./components/NavbBar";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <MainBody>
         <Container>
+            <NavbBar />
             <Showcase />
             <MySkills />
             <MyProjects />

@@ -17,7 +17,6 @@ import {
  } from '../../styles/MyProjects.styled';
  
 export const Project = ({data}) => {
-    console.log(data)
   return (
     <FlexContainer fullWidthChild>
         <div>
