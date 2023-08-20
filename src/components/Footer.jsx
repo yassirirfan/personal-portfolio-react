@@ -37,7 +37,7 @@ function Footer() {
             Contact <BlueText>Me Here</BlueText>
         </Heading>
         <PaddingContainer top="3rem">
-            <FlexContainer justify="center">
+            <FlexContainer justify="center" responsiveFlex>
                 <ContactForm>
                         <PaddingContainer bottom="2rem">
                             <FormLabel>Name: </FormLabel>
