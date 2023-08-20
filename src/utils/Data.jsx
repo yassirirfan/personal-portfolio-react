@@ -1,5 +1,14 @@
-import { FaReact, FaNode, FaCss3Alt, FaAws, FaPython, FaGithub } from 'react-icons/fa';
-import { SiJavascript, SiMongodb, SiMongoose, SiMysql,SiPostgresql, SiLinux } from 'react-icons/si';
+import { 
+    FaReact, 
+    FaNode, 
+    FaCss3Alt, 
+    FaPython 
+} from 'react-icons/fa';
+import { 
+    SiJavascript, 
+    SiMongodb, 
+} from 'react-icons/si';
+
 import Project1 from '../assets/Project1.png';
 import Project2 from '../assets/Project2.png';
 
@@ -35,36 +44,6 @@ export const Skills = [
         tech: 'Mongodb',
         icons: <SiMongodb />
     },
-    {
-        id: 6,
-        tech: 'Mongoose',
-        icons: <SiMongoose />
-    },
-    {
-        id: 7,
-        tech: 'Linux',
-        icons: <SiLinux />
-    },
-    {
-        id: 8,
-        tech: 'Mysql',
-        icons: <SiMysql />
-    },
-    {
-        id: 9,
-        tech: 'Postgresql',
-        icons: <SiPostgresql />
-    },
-    {
-        id: 10,
-        tech: 'FaAws',
-        icons: <FaAws />
-    },
-    {
-        id: 11,
-        tech: 'GitHub',
-        icons: <FaGithub />
-    },
 ]
 
 export const projects = [
@@ -84,7 +63,7 @@ export const projects = [
         image: Project2,
         tech_stack: ["Python", "Odoo", "PostgreSQL"],
         url: "https://github.com/odoo-hr-system",
-        reverse: false
+        reverse: true
     }
     
 ]

@@ -23,6 +23,10 @@ import {
 
 import ShowcaseImage from "../assets/showcase-img.png";
 import BackroundImage from "../assets/particle.png";
+import { 
+    fadeInLeftVariant, 
+    fadeInRightVariant 
+} from "../utils/Variants";
 
 const Showcase = () => {
     return (
@@ -39,9 +43,9 @@ const Showcase = () => {
         <FlexContainer align="center" text_align="left" fullWidthChild>
         {/* ---left-content--- */}
         <motion.div
-            initial={{ x: -50, opacity: 0}}
-            whileInView={{ x: 0, opacity: 1}}
-            transition={{ type: 'tween', duration: 1}}
+            variants={fadeInLeftVariant}
+            initial="hidden"
+            whileInView="visible"
         >
             <Heading as="h4" size="h4">
             {" "} Hello {" "}
@@ -71,12 +75,28 @@ const Showcase = () => {
         </motion.div>
 
         {/* ---right-content--- */}
-        <FlexContainer justify="flex-end">
+        <FlexContainer 
+            as={motion.div} 
+            variants={fadeInRightVariant} 
+            initial="hidden"
+            whileInView="visible"
+            justify="flex-end"
+        >
             <ShowcaseParticleContainer>
             <ShowcaseImageCard>
                 <img src={ShowcaseImage} alt="showcase" />
             </ShowcaseImageCard>
             <Particle
+                as={motion.img}
+                animate={{
+                    x: [0, -100, 0],
+                    rotate: 360,
+                    scale: [1, 0.9, 1],
+                }}
+                transition={{
+                    duration: 15,
+                    repeat: Infinity
+                }}
                 src={BackroundImage}
                 alt="background"
                 top="-80px"
@@ -84,6 +104,16 @@ const Showcase = () => {
                 rotate="60deg"
             />
             <Particle
+                as={motion.img}
+                animate={{
+                    y: [0, -100, 0],
+                    rotate: 360,
+                    scale: [1, 0.8, 1],
+                }}
+                transition={{
+                    duration: 18,
+                    repeat: Infinity
+                }}
                 src={BackroundImage}
                 alt="background"
                 top="50px"
@@ -91,6 +121,16 @@ const Showcase = () => {
                 rotate="0deg"
             />
             <Particle
+                as={motion.img}
+                animate={{
+                    y: [0, -100, 0],
+                    rotate: 360,
+                    scale: [1, 0.9, 1],
+                }}
+                transition={{
+                    duration: 15,
+                    repeat: Infinity,
+                }}
                 src={BackroundImage}
                 alt="background"
                 bottom="10px"
